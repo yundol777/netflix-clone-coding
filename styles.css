@@ -4,40 +4,22 @@
 }
 
 body {
-  background-color: #111;
+  background-color: rgb(17, 17, 17);
 }
 
 .navbar {
-  background-color: #111;
+  box-sizing: border-box;
+  background-color: transparent;
   position: fixed;
   top: 0;
   z-index: 1;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.navbar ul {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.navbar li {
-  list-style: none;
-  padding: 1rem;
-}
-
-.navbar li a {
-  padding: 2px 2px;
-  text-decoration: none;
-  color: #fff;
-}
-
-.navbar li a:hover {
-  color: gray;
+  height: 60px;
+  padding: 0 10px;
 }
 
 .logo {
@@ -51,9 +33,25 @@ body {
   width: 100%;
 }
 
+.avatar {
+  width: 25px;
+}
+
+.avatar img {
+  width: 100%;
+}
+
 /* banner */
 .banner {
-  background-image: url("./main-img/banner.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      rgba(17, 17, 17, 0) 10%,
+      rgba(17, 17, 17, 0.25) 25%,
+      rgba(17, 17, 17, 0.5) 50%,
+      rgba(17, 17, 17, 0.75) 75%,
+      rgba(17, 17, 17, 1) 100%
+    ),
+    url("./main-img/banner.jpg");
   background-size: cover;
   background-position: center;
   height: 448px;
@@ -67,7 +65,7 @@ body {
 }
 
 .banner_title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   padding-bottom: 0.3rem;
 }
@@ -78,14 +76,19 @@ body {
 }
 
 .banner_btn button {
-  width: 60px;
+  width: 70px;
   height: 30px;
   border-radius: 2px;
   border: 1px solid transparent;
+  background-color: rgba(255, 255, 255, 0.127);
+  margin-right: 10px;
+
+  color: white;
 }
 
 .banner_btn button:hover {
   background-color: rgb(171, 163, 163);
+  color: black;
   cursor: pointer;
 }
 
@@ -130,4 +133,43 @@ body {
 
 .row_posterLarge {
   max-height: 250px;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: #808080;
+  margin: 80px 20%;
+}
+
+.footerNav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  list-style: none;
+}
+
+.footerNav li a {
+  color: #808080;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footerNav li a:hover {
+  text-decoration: underline;
+}
+
+.footerBtn button {
+  padding: 6.5px;
+  font-size: 13px;
+  color: #808080;
+  border: 1px solid #808080;
+  background-color: transparent;
+}
+
+.footerP p {
+  font-size: 11px;
 }
